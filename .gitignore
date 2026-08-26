@@ -1,0 +1,14 @@
+# VS Code settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node modules (for future use)
+node_modules/
+
+# Environment variables
+.env
