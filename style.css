@@ -516,8 +516,247 @@ font-size:3rem;
 }
 
 }
+
 /* ===========================
-   SCROLL PROGRESS
+   MOBILE RESPONSIVE (max-width: 480px)
+=========================== */
+
+@media(max-width:480px){
+
+    /* Loader Mobile */
+    .loader-content h1{
+        font-size:1.8rem;
+        letter-spacing:2px;
+    }
+
+    #loading-text{
+        font-size:0.85rem;
+    }
+
+    .loading-bar{
+        width:250px;
+    }
+
+    /* Header Mobile */
+    header{
+        padding:12px 4%;
+    }
+
+    .logo{
+        font-size:1.3rem;
+    }
+
+    .menu-btn{
+        font-size:1.4rem;
+    }
+
+    /* Hero Mobile */
+    .hero{
+        padding:80px 4%;
+        min-height:auto;
+    }
+
+    .hero-left h3{
+        font-size:0.95rem;
+        margin-bottom:10px;
+    }
+
+    .hero-left h1{
+        font-size:1.8rem;
+        margin-bottom:15px;
+    }
+
+    .hero-left h2{
+        font-size:1.1rem;
+        min-height:auto;
+        margin-bottom:15px;
+    }
+
+    .hero-left p{
+        font-size:0.9rem;
+        margin-bottom:25px;
+        max-width:100%;
+    }
+
+    .image-box{
+        width:200px;
+        height:260px;
+    }
+
+    .image-box img{
+        transition:.4s;
+    }
+
+    .image-box:hover img{
+        transform:scale(1.05);
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:12px;
+        width:100%;
+        margin-bottom:25px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        padding:11px 20px;
+        font-size:0.9rem;
+        border-radius:35px;
+    }
+
+    .social-icons{
+        gap:12px;
+        margin-top:15px;
+    }
+
+    .social-icons a{
+        width:38px;
+        height:38px;
+        font-size:0.95rem;
+    }
+
+    /* Section Mobile */
+    .section{
+        padding:60px 4%;
+    }
+
+    .section-heading{
+        margin-bottom:50px;
+    }
+
+    .section-label{
+        font-size:0.65rem;
+        letter-spacing:2px;
+        margin-bottom:10px;
+    }
+
+    .section-heading h2{
+        font-size:1.8rem;
+        line-height:1.3;
+    }
+
+    .heading-line{
+        width:50px;
+        height:2px;
+        margin:15px auto 0;
+    }
+
+    .section-description{
+        font-size:0.9rem;
+        margin-top:15px;
+    }
+
+    /* About Mobile */
+    .about-container{
+        grid-template-columns:1fr;
+        gap:30px;
+        max-width:100%;
+    }
+
+    .about-image-frame{
+        width:240px;
+        height:300px;
+        margin:0 auto;
+    }
+
+    .about-intro{
+        font-size:1.1rem;
+        line-height:1.4;
+        margin-bottom:15px;
+    }
+
+    .about-content p{
+        font-size:0.9rem;
+        margin-bottom:15px;
+        line-height:1.7;
+    }
+
+    .about-content strong{
+        font-weight:600;
+    }
+
+    .about-ending{
+        font-size:0.95rem;
+        margin-top:15px;
+    }
+
+    .learning-card{
+        flex-direction:column;
+        text-align:center;
+        padding:15px;
+        gap:12px;
+        margin-top:20px;
+    }
+
+    .learning-icon{
+        width:45px;
+        height:45px;
+        min-width:45px;
+        font-size:1.1rem;
+    }
+
+    .learning-label{
+        font-size:0.65rem;
+        letter-spacing:1.5px;
+        margin-bottom:3px !important;
+    }
+
+    .learning-card h3{
+        font-size:0.9rem;
+    }
+
+    /* Skills Grid Mobile */
+    .skills-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+        max-width:100%;
+    }
+
+    .skill-card{
+        padding:20px 15px;
+    }
+
+    .skill-icon{
+        font-size:2.2rem;
+        margin-bottom:12px;
+    }
+
+    .skill-card h3{
+        font-size:1rem;
+        margin-bottom:8px;
+    }
+
+    .skill-card p{
+        font-size:0.85rem;
+        line-height:1.5;
+        margin-bottom:12px;
+    }
+
+    .skill-status{
+        font-size:0.65rem;
+    }
+
+    /* Mobile Menu */
+    .nav-links.active{
+        right:4% !important;
+        width:auto !important;
+        max-width:160px !important;
+        padding:15px !important;
+        gap:12px;
+    }
+
+    .nav-links.active a{
+        display:block;
+        padding:10px 0;
+        font-size:0.95rem;
+    }
+
+}
+
+/* ===========================
+    SCROLL PROGRESS
 =========================== */
 
 #progress-bar {
