@@ -1,3 +1,4 @@
+
 /* =================================
    PORTFOLIO JAVASCRIPT
 ================================= */
@@ -7,21 +8,21 @@
    1. LOADING SCREEN
 ================================= */
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
+
+    if (!loader) return;
 
     setTimeout(() => {
 
         loader.style.opacity = "0";
 
         setTimeout(() => {
-
             loader.style.display = "none";
-
         }, 500);
 
-    }, 3000);
+    }, 2500);
 
 });
 
@@ -33,29 +34,22 @@ window.addEventListener("load", function () {
 const typingText = document.getElementById("typing-text");
 
 const words = [
-
     "Cybersecurity Student",
-
     "Python Learner",
-
     "Future Security Analyst",
-
     "Cybersecurity Content Creator",
-
     "Cybersecurity Advocate",
-
     "Lifelong Learner"
-
 ];
 
 let wordIndex = 0;
-
 let characterIndex = 0;
-
 let deleting = false;
 
 
 function typeEffect() {
+
+    if (!typingText) return;
 
     const currentWord = words[wordIndex];
 
@@ -73,7 +67,6 @@ function typeEffect() {
             setTimeout(typeEffect, 1500);
 
             return;
-
         }
 
     } else {
@@ -89,30 +82,35 @@ function typeEffect() {
 
             wordIndex++;
 
-            if (wordIndex === words.length) {
-
+            if (wordIndex >= words.length) {
                 wordIndex = 0;
-
             }
-
         }
-
     }
 
-    setTimeout(typeEffect, deleting ? 50 : 100);
-
+    setTimeout(
+        typeEffect,
+        deleting ? 45 : 90
+    );
 }
 
-typeEffect();
+
+if (typingText) {
+    typeEffect();
+}
 
 
 /* =================================
    3. SCROLL PROGRESS BAR
 ================================= */
 
-const progressBar = document.getElementById("progress-bar");
+const progressBar =
+    document.getElementById("progress-bar");
 
-window.addEventListener("scroll", () => {
+
+function updateProgressBar() {
+
+    if (!progressBar) return;
 
     const scrollTop = window.scrollY;
 
@@ -120,13 +118,23 @@ window.addEventListener("scroll", () => {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
+    if (documentHeight <= 0) return;
+
     const scrollPercentage =
         (scrollTop / documentHeight) * 100;
 
     progressBar.style.width =
-        scrollPercentage + "%";
+        `${scrollPercentage}%`;
+}
 
-});
+
+window.addEventListener(
+    "scroll",
+    updateProgressBar,
+    { passive: true }
+);
+
+updateProgressBar();
 
 
 /* =================================
@@ -140,29 +148,71 @@ const navLinks =
     document.querySelector(".nav-links");
 
 
-menuButton.addEventListener("click", () => {
+if (menuButton && navLinks) {
 
-    navLinks.classList.toggle("active");
+    menuButton.addEventListener("click", (event) => {
 
-});
+        event.stopPropagation();
 
-
-/* =================================
-   5. CLOSE MOBILE MENU
-================================= */
-
-document.querySelectorAll(".nav-links a")
-.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
+        navLinks.classList.toggle("active");
 
     });
 
-});
+
+    /* =================================
+       5. CLOSE MENU WHEN LINK IS CLICKED
+    ================================= */
+
+    document.querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+    /* =================================
+       6. CLOSE MENU OUTSIDE
+    ================================= */
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            navLinks.classList.contains("active") &&
+            !navLinks.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+
+            navLinks.classList.remove("active");
+
+        }
+
+    });
+
+
+    /* =================================
+       7. CLOSE MENU WITH ESCAPE
+    ================================= */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            navLinks.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+
 /* =================================
-   SCROLL REVEAL
+   8. SCROLL REVEAL
 ================================= */
 
 const revealElements =
@@ -180,6 +230,15 @@ const revealObserver =
 
                     entry.target.classList.add("active");
 
+                    /*
+                       Stop observing after
+                       the animation happens.
+                    */
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
                 }
 
             });
@@ -187,7 +246,7 @@ const revealObserver =
         },
 
         {
-            threshold: 0.15
+            threshold: 0.12
         }
 
     );
