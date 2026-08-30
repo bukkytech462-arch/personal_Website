@@ -2,182 +2,369 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dorcas Afolayan | Cybersecurity Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description" content="Personal portfolio of Dorcas Afolayan Oluwabukola - Cybersecurity Student, Python Learner and Future Security Professional.">
+    <meta
+        name="description"
+        content="Afolayan Dorcas Oluwabukola — Cybersecurity student, Python learner, content creator and future cybersecurity professional."
+    >
+
+    <meta
+        name="author"
+        content="Afolayan Dorcas Oluwabukola"
+    >
+
+    <title>Bukky Tech | Cybersecurity Student</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
-<!-- ================= LOADER ================= -->
+<!-- =====================================================
+     LOADING SCREEN
+===================================================== -->
 
-<div id="loader">
+<div class="loader" id="loader">
 
     <div class="loader-content">
 
-        <h1>DORCAS AFOLAYAN</h1>
+        <div class="loader-logo">
+            BT<span>.</span>
+        </div>
 
-        <p id="loading-text">
-            Initializing Portfolio...
+        <p>
+            INITIALIZING...
         </p>
 
-        <div class="loading-bar">
-
-            <div class="loading-progress"></div>
-
+        <div class="loader-line">
+            <span></span>
         </div>
 
     </div>
 
 </div>
 
-<!-- ================= SCROLL PROGRESS ================= -->
 
-<div id="progress-bar"></div>
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
 
-<!-- ================= NAVIGATION ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
-<header>
 
-<nav class="navbar">
+<!-- =====================================================
+     CYBER BACKGROUND
+===================================================== -->
 
-<div class="logo">
+<div class="cyber-background">
 
-Dorcas<span>.</span>
+    <div class="grid-overlay"></div>
 
-</div>
-
-<ul class="nav-links">
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#certificates">Certificates</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<div class="menu-btn">
-
-<i class="fa-solid fa-bars"></i>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
 
 </div>
 
-</nav>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+
+            <span>BT</span>
+            <small>CYBER</small>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#about" class="nav-link">
+                About
+            </a>
+
+            <a href="#skills" class="nav-link">
+                Skills
+            </a>
+
+            <a href="#certificates" class="nav-link">
+                Certificates
+            </a>
+
+            <a href="#journey" class="nav-link">
+                Journey
+            </a>
+
+            <a href="#projects" class="nav-link">
+                Projects
+            </a>
+
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <!-- Theme -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle theme"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
 
 </header>
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
 
 <section id="home" class="hero">
 
-<div class="particles"></div>
+    <div class="hero-container">
 
-<div class="hero-content">
+        <!-- Hero Text -->
 
-<div class="hero-left">
+        <div class="hero-content reveal">
 
-<h3>Hello, I'm</h3>
+            <div class="terminal-label">
 
-<h1>
+                <span class="terminal-dot"></span>
 
-Dorcas <span>Afolayan</span>
+                <span>
+                    SYSTEM ONLINE
+                </span>
 
-</h1>
+            </div>
 
-<h2>
 
-<span id="typing-text"></span>
+            <p class="hero-intro">
+                Hello, I'm
+            </p>
 
-</h2>
 
-<p>
+            <h1>
+                Bukky
+                <span>Tech.</span>
+            </h1>
 
-Building a safer digital future one certification,
-one project and one lesson at a time.
 
-</p>
+            <h2 class="hero-role">
 
-<div class="hero-buttons">
+                <span id="typingText"></span>
+                <span class="cursor">|</span>
 
-<a href="#about" class="btn-primary">
+            </h2>
 
-View Journey
 
-</a>
+            <p class="hero-description">
 
-<a href="#contact" class="btn-secondary">
+                A curious cybersecurity student building
+                knowledge, skills and experience one step
+                at a time.
 
-Contact Me
+            </p>
 
-</a>
 
-</div>
+            <div class="hero-buttons">
 
-<div class="social-icons">
+                <a
+                    href="#journey"
+                    class="btn btn-primary"
+                >
+                    View My Journey
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
 
-<a href="https://www.linkedin.com/in/dorcas-afolayan-a3002938b" target="_blank">
 
-<i class="fab fa-linkedin"></i>
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
+                    Contact Me
+                    <i class="fa-regular fa-paper-plane"></i>
+                </a>
 
-</a>
+            </div>
 
-<a href="https://www.instagram.com/afolayandorcas001" target="_blank">
 
-<i class="fab fa-instagram"></i>
+            <div class="hero-socials">
 
-</a>
+                <a
+                    href="https://www.linkedin.com/in/dorcas-afolayan-a3002938b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
 
-<a href="https://www.facebook.com/share/19EWZcxXXT/" target="_blank">
+                <a
+                    href="https://www.instagram.com/afolayandorcas001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-<i class="fab fa-facebook"></i>
+                <a
+                    href="https://www.facebook.com/share/19EWZcxXXT/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
 
-</a>
+                <a
+                    href="mailto:afolayandorcas46@gmail.com"
+                    aria-label="Email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<div class="hero-right">
 
-<div class="image-box">
+        <!-- Hero Image -->
 
-<img src="assets/images/hero.jpg" alt="Dorcas">
+        <div class="hero-image-wrapper reveal">
 
-</div>
+            <div class="hero-image-frame">
 
-</div>
+                <div class="scan-line"></div>
 
-</div>
+                <img
+                    src="assets/images/hero.jpg"
+                    alt="Afolayan Dorcas Oluwabukola"
+                >
+
+                <div class="image-corner top-left"></div>
+                <div class="image-corner top-right"></div>
+                <div class="image-corner bottom-left"></div>
+                <div class="image-corner bottom-right"></div>
+
+            </div>
+
+
+            <div class="floating-card card-one">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <small>FIELD</small>
+                    <strong>Cybersecurity</strong>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card card-two">
+
+                <i class="fa-brands fa-python"></i>
+
+                <div>
+                    <small>LEARNING</small>
+                    <strong>Python</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-scroll">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div class="scroll-line"></div>
+
+    </div>
 
 </section>
-<!-- ================= ABOUT ================= -->
 
-<section id="about" class="about section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-        <p class="section-label">GET TO KNOW ME</p>
+<section id="about" class="section about">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            WHO I AM
+        </span>
 
         <h2>
-            About <span>Me</span>
+            The Journey
+            <span>Behind The Code</span>
         </h2>
 
         <div class="heading-line"></div>
@@ -187,105 +374,66 @@ Contact Me
 
     <div class="about-container">
 
-        <!-- About Image -->
-
         <div class="about-image reveal">
 
-            <div class="about-image-frame">
+            <img
+                src="assets/images/about.jpg"
+                alt="Dorcas at a technology event"
+            >
 
-                <img
-                    src="assets/images/WhatsApp Image 2026-05-22 at 10.15.54.jpeg"
-                    alt="Afolayan Dorcas Oluwabukola"
-                >
-
-                <div class="image-glow"></div>
-
+            <div class="about-image-label">
+                <span>01</span>
+                MY JOURNEY
             </div>
 
         </div>
 
 
-        <!-- About Content -->
-
         <div class="about-content reveal">
 
-            <p class="about-intro">
-
+            <p class="about-lead">
                 My journey into cybersecurity is just beginning,
                 but my passion is limitless.
-
             </p>
 
-
             <p>
-
-                I am <strong>Afolayan Dorcas Oluwabukola</strong>,
-                a 100 Level Cybersecurity student committed to
-                learning, growing, and discovering the many
-                possibilities within cybersecurity.
-
+                I am a 100 Level Cybersecurity student committed
+                to learning, growing and contributing to the
+                cybersecurity community.
             </p>
 
-
             <p>
-
-                I believe cybersecurity is not only about
-                protecting systems and information. It is also
-                about protecting people, educating communities,
+                Beyond technical skills, I believe cybersecurity
+                is about protecting people, empowering communities
                 and creating a safer digital future.
-
             </p>
-
 
             <p>
-
-                One of the things I am especially passionate about
-                is encouraging girls and young women to explore
-                technology and confidently pursue careers in
-                cybersecurity.
-
+                I am especially passionate about encouraging girls
+                and young women to explore careers in cybersecurity
+                and technology.
             </p>
-
 
             <p>
-
-                Through continuous learning, certifications,
-                projects, and content creation, I hope to document
-                my journey while inspiring others who may also be
-                wondering where to begin.
-
+                Through continuous learning, projects,
+                certifications and content creation, I hope to
+                inspire others while documenting every step of
+                my journey.
             </p>
 
 
-            <p class="about-ending">
+            <div class="about-highlight">
 
-                This is only the beginning.
-                <span>More is coming.</span>
+                <i class="fa-solid fa-quote-left"></i>
 
-            </p>
+                <strong>
+                    This is only the beginning.
+                </strong>
 
-
-            <!-- Currently Learning -->
-
-            <div class="learning-card">
-
-                <div class="learning-icon">
-
-                    <i class="fa-solid fa-terminal"></i>
-
-                </div>
-
-                <div>
-
-                    <p class="learning-label">
-                        CURRENTLY LEARNING
-                    </p>
-
-                    <h3>
-                        Cybersecurity • Linux • Networking • Python
-                    </h3>
-
-                </div>
+                <span>
+                    More achievements, certifications and
+                    exciting projects are still to come.
+                </span>
 
             </div>
 
@@ -294,23 +442,30 @@ Contact Me
     </div>
 
 </section>
-<!-- ================= SKILLS ================= -->
 
-<section id="skills" class="skills section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     SKILLS
+===================================================== -->
 
-        <p class="section-label">WHAT I'M BUILDING</p>
+<section id="skills" class="section skills">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            WHAT I'M LEARNING
+        </span>
 
         <h2>
-            My <span>Skills</span>
+            Skills &
+            <span>Knowledge</span>
         </h2>
 
         <div class="heading-line"></div>
 
-        <p class="section-description">
-            Skills I'm developing as I continue my journey
-            through cybersecurity and technology.
+        <p>
+            Building a strong foundation today for the
+            cybersecurity career of tomorrow.
         </p>
 
     </div>
@@ -318,203 +473,81 @@ Contact Me
 
     <div class="skills-grid">
 
-        <!-- Cybersecurity -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
-
-            <h3>Cybersecurity Fundamentals</h3>
-
-            <p>
-                Building a strong foundation in cybersecurity,
-                security principles, threats, and safe digital practices.
-            </p>
-
-            <span class="skill-status">
-                LEARNING
-            </span>
-
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Cybersecurity</h3>
+            <p>Fundamentals</p>
         </div>
 
-
-        <!-- Python -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-brands fa-python"></i>
-            </div>
-
+            <i class="fa-brands fa-python"></i>
             <h3>Python</h3>
-
-            <p>
-                Learning Python programming and using it to
-                develop problem-solving and automation skills.
-            </p>
-
-            <span class="skill-status">
-                LEARNING
-            </span>
-
+            <p>Programming</p>
         </div>
 
-
-        <!-- Linux -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-brands fa-linux"></i>
-            </div>
-
+            <i class="fa-brands fa-linux"></i>
             <h3>Linux</h3>
-
-            <p>
-                Exploring Linux, command-line environments,
-                system navigation, and cybersecurity tools.
-            </p>
-
-            <span class="skill-status">
-                LEARNING
-            </span>
-
+            <p>Operating Systems</p>
         </div>
 
-
-        <!-- Networking -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-network-wired"></i>
-            </div>
-
+            <i class="fa-solid fa-network-wired"></i>
             <h3>Networking</h3>
-
-            <p>
-                Learning networking fundamentals, communication,
-                network types, data transmission, and connectivity.
-            </p>
-
-            <span class="skill-status">
-                LEARNING
-            </span>
-
+            <p>Network Fundamentals</p>
         </div>
 
-
-        <!-- Problem Solving -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
-
+            <i class="fa-solid fa-brain"></i>
             <h3>Problem Solving</h3>
-
-            <p>
-                Developing logical thinking through programming,
-                technical challenges, and practical exercises.
-            </p>
-
-            <span class="skill-status">
-                DEVELOPING
-            </span>
-
+            <p>Logical Thinking</p>
         </div>
 
-
-        <!-- Content Creation -->
-
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-pen-nib"></i>
-            </div>
-
-            <h3>Content Creation</h3>
-
-            <p>
-                Passionate about creating cybersecurity awareness
-                content and making technical topics easier to understand.
-            </p>
-
-            <span class="skill-status">
-                DEVELOPING
-            </span>
-
-        </div>
-
-
-        <!-- Communication -->
-
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-comments"></i>
-            </div>
-
+            <i class="fa-solid fa-comments"></i>
             <h3>Communication</h3>
-
-            <p>
-                Developing the ability to communicate technical
-                ideas clearly and connect with others.
-            </p>
-
-            <span class="skill-status">
-                DEVELOPING
-            </span>
-
+            <p>Sharing Knowledge</p>
         </div>
 
-
-        <!-- Continuous Learning -->
+        <div class="skill-card reveal">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Content Creation</h3>
+            <p>Cyber Awareness</p>
+        </div>
 
         <div class="skill-card reveal">
-
-            <div class="skill-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-
-            <h3>Continuous Learning</h3>
-
-            <p>
-                Constantly exploring new technologies, concepts,
-                tools, certifications, and opportunities to grow.
-            </p>
-
-            <span class="skill-status">
-                ALWAYS
-            </span>
-
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Learning Mindset</h3>
+            <p>Continuous Growth</p>
         </div>
 
     </div>
 
 </section>
-<!-- ================= CERTIFICATIONS ================= -->
 
-<section id="certificates" class="certificates section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
 
-        <p class="section-label">MY ACHIEVEMENTS</p>
+<section id="certificates" class="section certificates">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            MILESTONES
+        </span>
 
         <h2>
-            Certifications & <span>Learning</span>
+            My
+            <span>Certificates</span>
         </h2>
 
         <div class="heading-line"></div>
 
-        <p class="section-description">
-
+        <p>
             Every certificate represents another step
-            in my cybersecurity journey.
-
+            forward in my learning journey.
         </p>
 
     </div>
@@ -523,229 +556,147 @@ Contact Me
     <div class="certificates-grid">
 
 
-        <!-- ================= CERTIFICATE 1 ================= -->
+        <!-- Certificate 1 -->
 
         <article class="certificate-card reveal">
 
-            <div class="certificate-image">
+            <div class="certificate-preview">
 
-                <img
-                    src="assets/certificates/intro-cybersecurity-certificate.png"
-                    alt="Introduction to Cybersecurity Certificate"
-                >
-
-                <div class="certificate-overlay">
-
-                    <a
-                        href="assets/certificates/intro-cybersecurity-certificate.pdf"
-                        target="_blank"
-                        class="certificate-view"
-                    >
-
-                        <i class="fa-solid fa-expand"></i>
-
-                        View Certificate
-
-                    </a>
-
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
                 </div>
+
+                <span>
+                    VERIFIED MILESTONE
+                </span>
 
             </div>
 
-
             <div class="certificate-content">
 
-                <div class="certificate-top">
-
-                    <span class="certificate-badge">
-                        CERTIFIED
-                    </span>
-
-                    <i class="fa-solid fa-certificate"></i>
-
-                </div>
-
+                <span class="certificate-number">
+                    CERTIFICATE 01
+                </span>
 
                 <h3>
                     Introduction to Cybersecurity
                 </h3>
 
-
                 <p>
-
-                    A foundational certification marking
-                    one of the first steps in my cybersecurity
-                    learning journey.
-
+                    A foundational cybersecurity certification
+                    marking the beginning of my journey into
+                    digital security.
                 </p>
 
-
-                <div class="certificate-footer">
-
-                    <span>
-                        <i class="fa-solid fa-shield-halved"></i>
-                        Cybersecurity
-                    </span>
-
-                    <a
-                        href="assets/certificates/intro-cybersecurity-certificate.pdf"
-                        target="_blank"
-                    >
-
-                        View
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
+                <a
+                    href="assets/certificates/intro-cybersecurity-certificate.pdf"
+                    target="_blank"
+                    class="certificate-link"
+                >
+                    View Certificate
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
 
             </div>
 
         </article>
 
 
-
-        <!-- ================= CERTIFICATE 2 ================= -->
+        <!-- Certificate 2 -->
 
         <article class="certificate-card reveal">
 
-            <div class="certificate-image">
+            <div class="certificate-preview python-preview">
 
-                <img
-                    src="assets/certificates/python-certificate.png"
-                    alt="Python Completion Certificate"
-                >
-
-                <div class="certificate-overlay">
-
-                    <a
-                        href="assets/certificates/python-certificate.png"
-                        target="_blank"
-                        class="certificate-view"
-                    >
-
-                        <i class="fa-solid fa-expand"></i>
-
-                        View Certificate
-
-                    </a>
-
+                <div class="certificate-icon">
+                    <i class="fa-brands fa-python"></i>
                 </div>
+
+                <span>
+                    COMPLETED
+                </span>
 
             </div>
 
-
             <div class="certificate-content">
 
-                <div class="certificate-top">
-
-                    <span class="certificate-badge">
-                        COMPLETED
-                    </span>
-
-                    <i class="fa-brands fa-python"></i>
-
-                </div>
-
+                <span class="certificate-number">
+                    CERTIFICATE 02
+                </span>
 
                 <h3>
                     Python Completion Certificate
                 </h3>
 
-
                 <p>
-
-                    A milestone in my programming journey,
-                    strengthening my understanding of Python
-                    and problem-solving.
-
+                    A milestone in my programming journey and
+                    continued development of Python skills.
                 </p>
 
-
-                <div class="certificate-footer">
-
-                    <span>
-
-                        <i class="fa-brands fa-python"></i>
-
-                        Python
-
-                    </span>
-
-
-                    <a
-                        href="assets/certificates/python-certificate.png"
-                        target="_blank"
-                    >
-
-                        View
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
+                <a
+                    href="assets/certificates/python-certificate.png"
+                    target="_blank"
+                    class="certificate-link"
+                >
+                    View Certificate
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
 
             </div>
 
         </article>
 
 
+        <!-- Future -->
 
-        <!-- ================= FUTURE CERTIFICATES ================= -->
+        <article class="certificate-card future-card reveal">
 
-        <article class="certificate-card coming-certificate reveal">
-
-            <div class="coming-content">
-
-                <div class="coming-icon">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </div>
-
-                <span>
-                    MORE TO COME
-                </span>
-
-                <h3>
-                    The Journey Continues
-                </h3>
-
-                <p>
-
-                    More certifications, courses,
-                    achievements and milestones will
-                    be added as I continue learning.
-
-                </p>
-
+            <div class="future-icon">
+                <i class="fa-solid fa-plus"></i>
             </div>
 
-        </article>
+            <span class="future-label">
+                MORE TO COME
+            </span>
 
+            <h3>
+                Future Certifications
+            </h3>
+
+            <p>
+                This space will continue to grow as I learn,
+                complete new programs and earn more certifications.
+            </p>
+
+        </article>
 
     </div>
 
 </section>
-<!-- ================= JOURNEY ================= -->
 
-<section id="journey" class="journey section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
 
-        <p class="section-label">MY STORY</p>
+<section id="journey" class="section journey">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            MY STORY
+        </span>
 
         <h2>
-            My <span>Journey</span>
+            My Cybersecurity
+            <span>Journey</span>
         </h2>
 
         <div class="heading-line"></div>
 
-        <p class="section-description">
-            Every step, every lesson, and every challenge
-            is shaping the cybersecurity professional I am
-            becoming.
+        <p>
+            Every step, every lesson and every challenge
+            is shaping the professional I am becoming.
         </p>
 
     </div>
@@ -754,286 +705,195 @@ Contact Me
     <div class="timeline">
 
 
-        <!-- Python -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-brands fa-python"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    THE BEGINNING
-                </span>
+                <span>THE BEGINNING</span>
 
                 <h3>
                     Started Learning Python
                 </h3>
 
                 <p>
-                    My programming journey began with Python,
-                    where I started learning how to think
-                    logically, solve problems, and build with code.
+                    Began developing programming and logical
+                    problem-solving skills through Python.
                 </p>
 
-                <span class="timeline-status">
-                    COMPLETED
-                </span>
+                <b>COMPLETED</b>
 
             </div>
 
         </div>
 
 
-        <!-- Cybersecurity -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-shield-halved"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    MILESTONE
-                </span>
+                <span>MILESTONE</span>
 
                 <h3>
                     Introduction to Cybersecurity
                 </h3>
 
                 <p>
-                    Completed my Introduction to Cybersecurity
-                    certification and began exploring the world
-                    of digital security.
+                    Completed my introductory cybersecurity
+                    certification.
                 </p>
 
-                <span class="timeline-status">
-                    COMPLETED
-                </span>
+                <b>COMPLETED</b>
 
             </div>
 
         </div>
 
 
-        <!-- University -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-building-columns"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    CURRENT CHAPTER
-                </span>
+                <span>CURRENT CHAPTER</span>
 
                 <h3>
-                    Began Studying Cybersecurity
+                    Cybersecurity Student
                 </h3>
 
                 <p>
-                    Started my university journey as a 100 Level
-                    Cybersecurity student, building the academic
-                    foundation for my future career.
+                    Began my university journey as a
+                    Cybersecurity student.
                 </p>
 
-                <span class="timeline-status current">
+                <b class="current">
                     CURRENTLY HERE
-                </span>
+                </b>
 
             </div>
 
         </div>
 
 
-        <!-- Python Certificate -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-certificate"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    MILESTONE
-                </span>
+                <span>MILESTONE</span>
 
                 <h3>
-                    Completed Python Certificate
+                    Python Certificate
                 </h3>
 
                 <p>
-                    Completed my Python program and added another
-                    important milestone to my technical journey.
+                    Completed a Python program and added
+                    another milestone to my technical journey.
                 </p>
 
-                <span class="timeline-status">
-                    COMPLETED
-                </span>
+                <b>COMPLETED</b>
 
             </div>
 
         </div>
 
 
-        <!-- Future Certifications -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-lock"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    NEXT LEVEL
-                </span>
+                <span>NEXT LEVEL</span>
 
                 <h3>
                     Future Certifications
                 </h3>
 
                 <p>
-                    More cybersecurity certifications,
-                    courses, and learning milestones are
-                    waiting ahead.
+                    More certifications and learning
+                    milestones are ahead.
                 </p>
 
-                <span class="timeline-status upcoming">
+                <b class="upcoming">
                     COMING SOON
-                </span>
+                </b>
 
             </div>
 
         </div>
 
 
-        <!-- Projects -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-code"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    BUILDING
-                </span>
+                <span>BUILDING</span>
 
                 <h3>
-                    Cybersecurity Projects
+                    Practical Projects
                 </h3>
 
                 <p>
-                    Building practical projects, experimenting
-                    with tools, and turning what I learn into
-                    something useful.
+                    Turning knowledge into practical
+                    cybersecurity and Python projects.
                 </p>
 
-                <span class="timeline-status upcoming">
-                    COMING SOON
-                </span>
+                <b class="upcoming">
+                    STILL BUILDING
+                </b>
 
             </div>
 
         </div>
 
 
-        <!-- Internship -->
-
         <div class="timeline-item reveal">
 
             <div class="timeline-dot">
-
                 <i class="fa-solid fa-briefcase"></i>
-
             </div>
 
             <div class="timeline-content">
 
-                <span class="timeline-date">
-                    FUTURE GOAL
-                </span>
+                <span>FUTURE GOAL</span>
 
                 <h3>
                     Internship
                 </h3>
 
                 <p>
-                    Gaining real-world experience and learning
-                    from professionals within the cybersecurity
-                    industry.
+                    Gaining real-world experience within
+                    the cybersecurity industry.
                 </p>
 
-                <span class="timeline-status upcoming">
+                <b class="upcoming">
                     FUTURE
-                </span>
+                </b>
 
             </div>
 
         </div>
 
-
-        <!-- Career -->
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot">
-
-                <i class="fa-solid fa-bullseye"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    THE VISION
-                </span>
-
-                <h3>
-                    Becoming a Cybersecurity Professional
-                </h3>
-
-                <p>
-                    Growing into a skilled cybersecurity
-                    professional while using my knowledge to
-                    educate, protect, and empower others.
-                </p>
-
-                <span class="timeline-status upcoming">
-                    FUTURE
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- Final -->
 
         <div class="timeline-final reveal">
 
@@ -1053,22 +913,81 @@ Contact Me
     </div>
 
 </section>
-<!-- ================= PROJECTS ================= -->
 
-<section id="projects" class="projects section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     VISION
+===================================================== -->
 
-        <p class="section-label">WHAT I'M BUILDING</p>
+<section id="vision" class="section vision">
+
+    <div class="vision-container reveal">
+
+        <div class="vision-number">
+            02
+        </div>
+
+        <div class="vision-content">
+
+            <span class="section-label">
+                MY PURPOSE
+            </span>
+
+            <h2>
+                My
+                <span>Vision</span>
+            </h2>
+
+            <p class="vision-main">
+                I dream of becoming a cybersecurity professional
+                who not only protects digital systems but also
+                inspires the next generation.
+            </p>
+
+            <p>
+                I want to promote cybersecurity awareness through
+                content creation, community engagement and education.
+            </p>
+
+            <p>
+                One of my biggest passions is empowering girls and
+                young women to believe that they belong in technology
+                and cybersecurity.
+            </p>
+
+            <p>
+                Every lesson I learn today is preparing me to make
+                a greater impact tomorrow.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="section projects">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            WHAT I'M BUILDING
+        </span>
 
         <h2>
-            My <span>Projects</span>
+            My
+            <span>Projects</span>
         </h2>
 
         <div class="heading-line"></div>
 
-        <p class="section-description">
-            I'm currently learning, experimenting, and turning
+        <p>
+            I'm currently learning, experimenting and turning
             what I learn into practical projects.
         </p>
 
@@ -1077,8 +996,6 @@ Contact Me
 
     <div class="projects-grid">
 
-
-        <!-- Project 1 -->
 
         <article class="project-card reveal">
 
@@ -1095,24 +1012,17 @@ Contact Me
             </h3>
 
             <p>
-                Exploring cybersecurity tools and gradually
-                building practical skills through hands-on
-                learning and experimentation.
+                Exploring cybersecurity tools and developing
+                practical hands-on skills.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-lock"></i>
-                    Cybersecurity
-                </span>
-
+                <span>Cybersecurity</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
-        <!-- Project 2 -->
 
         <article class="project-card reveal">
 
@@ -1129,24 +1039,17 @@ Contact Me
             </h3>
 
             <p>
-                Building small Python projects as I strengthen
-                my programming, logic, automation, and
-                problem-solving skills.
+                Building Python projects while strengthening
+                programming and problem-solving skills.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-code"></i>
-                    Python
-                </span>
-
+                <span>Python</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
-        <!-- Project 3 -->
 
         <article class="project-card reveal">
 
@@ -1164,23 +1067,16 @@ Contact Me
 
             <p>
                 Working towards practical cybersecurity
-                challenges and documenting what I learn
-                along the way.
+                challenges and documenting my learning.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-terminal"></i>
-                    CTF
-                </span>
-
+                <span>CTF</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
-        <!-- Project 4 -->
 
         <article class="project-card reveal">
 
@@ -1197,24 +1093,17 @@ Contact Me
             </h3>
 
             <p>
-                Learning how websites work and exploring
-                the fundamentals of web security and
+                Learning web security fundamentals and
                 secure development.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-code"></i>
-                    Web Security
-                </span>
-
+                <span>Web Security</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
-        <!-- Project 5 -->
 
         <article class="project-card reveal">
 
@@ -1231,24 +1120,17 @@ Contact Me
             </h3>
 
             <p>
-                Developing my networking knowledge and
-                working towards hands-on network security
-                labs and experiments.
+                Developing networking knowledge through
+                practical experiments and labs.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-network-wired"></i>
-                    Networking
-                </span>
-
+                <span>Networking</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
-        <!-- Project 6 -->
 
         <article class="project-card reveal">
 
@@ -1265,35 +1147,23 @@ Contact Me
             </h3>
 
             <p>
-                Documenting cybersecurity concepts, interesting
-                discoveries, study notes, and lessons from my
-                learning journey.
+                Documenting cybersecurity concepts, discoveries,
+                study notes and lessons.
             </p>
 
             <div class="project-footer">
-                <span>
-                    <i class="fa-solid fa-book"></i>
-                    Research
-                </span>
-
+                <span>Research</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
         </article>
 
-
     </div>
 
 
-    <!-- Building Message -->
-
     <div class="building-message reveal">
 
-        <div class="building-animation">
-
-            <i class="fa-solid fa-hammer"></i>
-
-        </div>
+        <i class="fa-solid fa-hammer"></i>
 
         <div>
 
@@ -1304,9 +1174,8 @@ Contact Me
             </h3>
 
             <p>
-                These projects are part of the journey.
-                As I learn, experiment, and create,
-                this space will continue to grow.
+                As I learn, experiment and create, this
+                section will continue to grow.
             </p>
 
         </div>
@@ -1314,26 +1183,191 @@ Contact Me
     </div>
 
 </section>
-<!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact section">
 
-    <div class="section-heading">
+<!-- =====================================================
+     CYBER NOTES
+===================================================== -->
 
-        <p class="section-label">LET'S CONNECT</p>
+<section id="notes" class="section notes">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            FROM MY NOTEBOOK
+        </span>
 
         <h2>
-            Get In <span>Touch</span>
+            Cyber
+            <span>Notes</span>
         </h2>
 
         <div class="heading-line"></div>
 
-        <p class="section-description">
+        <p>
+            A future space for everything I learn,
+            discover and share.
+        </p>
 
-            Whether you want to connect, collaborate,
-            share an opportunity, or simply say hello,
+    </div>
+
+
+    <div class="notes-container reveal">
+
+        <div class="notes-terminal">
+
+            <div class="terminal-header">
+
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <small>
+                    cyber_notes.txt
+                </small>
+
+            </div>
+
+
+            <div class="terminal-body">
+
+                <p>
+                    <span>$</span> ls my-learning/
+                </p>
+
+                <p>
+                    cybersecurity-awareness/
+                </p>
+
+                <p>
+                    beginner-tutorials/
+                </p>
+
+                <p>
+                    python-tips/
+                </p>
+
+                <p>
+                    linux-notes/
+                </p>
+
+                <p>
+                    ctf-experiences/
+                </p>
+
+                <p>
+                    career-reflections/
+                </p>
+
+                <p class="terminal-cursor">
+                    <span>$</span> first article coming soon...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section id="gallery" class="section gallery">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            MOMENTS
+        </span>
+
+        <h2>
+            My
+            <span>Gallery</span>
+        </h2>
+
+        <div class="heading-line"></div>
+
+        <p>
+            Events, workshops, conferences and moments
+            from my technology journey.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid reveal">
+
+        <div class="gallery-item gallery-large">
+
+            <img
+                src="assets/images/about.jpg"
+                alt="Technology event"
+            >
+
+            <div class="gallery-overlay">
+                <span>MY JOURNEY</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="assets/images/hero.jpg"
+                alt="Technology journey"
+            >
+
+            <div class="gallery-overlay">
+                <span>GROWTH</span>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-placeholder">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <span>
+                More moments coming soon
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="section contact">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            LET'S CONNECT
+        </span>
+
+        <h2>
+            Get In
+            <span>Touch</span>
+        </h2>
+
+        <div class="heading-line"></div>
+
+        <p>
+            Want to connect, collaborate or simply say hello?
             I'd love to hear from you.
-
         </p>
 
     </div>
@@ -1356,13 +1390,11 @@ Contact Me
             </h3>
 
             <p>
-                I'm always open to connecting with people
-                interested in cybersecurity, technology,
-                learning, and creating positive impact.
+                I'm open to connecting with people interested
+                in cybersecurity, technology, learning and
+                creating positive impact.
             </p>
 
-
-            <!-- Email -->
 
             <a
                 href="mailto:afolayandorcas46@gmail.com"
@@ -1377,7 +1409,7 @@ Contact Me
 
                 <div>
 
-                    <span>EMAIL</span>
+                    <small>EMAIL</small>
 
                     <strong>
                         afolayandorcas46@gmail.com
@@ -1388,8 +1420,6 @@ Contact Me
             </a>
 
 
-            <!-- Socials -->
-
             <div class="social-area">
 
                 <span>
@@ -1398,30 +1428,23 @@ Contact Me
 
                 <div class="contact-socials">
 
-
                     <a
-                        href="https://www.linkedin.com/in/dorcas-afolayan-a3002938b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        href="https://www.linkedin.com/in/dorcas-afolayan-a3002938b"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
                     >
-
                         <i class="fa-brands fa-linkedin-in"></i>
-
                     </a>
 
-
                     <a
-                        href="https://www.instagram.com/afolayandorcas001?igsh=MWptZ2lxamRmbmZrag=="
+                        href="https://www.instagram.com/afolayandorcas001"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
                     >
-
                         <i class="fa-brands fa-instagram"></i>
-
                     </a>
-
 
                     <a
                         href="https://www.facebook.com/share/19EWZcxXXT/"
@@ -1429,9 +1452,7 @@ Contact Me
                         rel="noopener noreferrer"
                         aria-label="Facebook"
                     >
-
                         <i class="fa-brands fa-facebook-f"></i>
-
                     </a>
 
                 </div>
@@ -1441,17 +1462,11 @@ Contact Me
         </div>
 
 
-
-        <!-- Contact Form -->
+        <!-- Form -->
 
         <div class="contact-form-wrapper reveal">
 
-            <form
-                class="contact-form"
-                action="mailto:afolayandorcas46@gmail.com"
-                method="post"
-                enctype="text/plain"
-            >
+            <form id="contactForm">
 
                 <div class="form-group">
 
@@ -1522,6 +1537,100 @@ Contact Me
     </div>
 
 </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <span>BT</span>
+
+            <p>
+                Bukky Tech
+            </p>
+
+        </div>
+
+
+        <p class="footer-text">
+
+            Built with passion, curiosity and a commitment
+            to continuous growth.
+
+        </p>
+
+
+        <div class="footer-socials">
+
+            <a
+                href="https://www.linkedin.com/in/dorcas-afolayan-a3002938b"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+                href="https://www.instagram.com/afolayandorcas001"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+                href="https://www.facebook.com/share/19EWZcxXXT/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="year"></span> Bukky Tech.
+        </p>
+
+        <p>
+            Designed to evolve as my cybersecurity journey grows.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- JavaScript -->
+
 <script src="script.js"></script>
 
 </body>
