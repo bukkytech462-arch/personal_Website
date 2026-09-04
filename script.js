@@ -1,14 +1,8 @@
 
-<<<<<<< HEAD
-/* =================================
-   PORTFOLIO JAVASCRIPT
-================================= */
-=======
 /* =====================================================
    BUKKY TECH PORTFOLIO
    JAVASCRIPT
 ===================================================== */
->>>>>>> save-my-website
 
 
 /* =====================================================
@@ -20,21 +14,11 @@ window.addEventListener("load", () => {
     const loader =
         document.getElementById("loader");
 
-    if (!loader) return;
-
     setTimeout(() => {
 
         loader.classList.add("hide");
 
-<<<<<<< HEAD
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 500);
-
-    }, 2500);
-=======
     }, 1200);
->>>>>>> save-my-website
 
 });
 
@@ -162,37 +146,34 @@ const typingText =
 
 
 const words = [
+
     "Cybersecurity Student",
+
     "Python Learner",
+
     "Future Security Analyst",
-<<<<<<< HEAD
-    "Cybersecurity Content Creator",
-=======
 
     "Content Creator",
 
->>>>>>> save-my-website
     "Cybersecurity Advocate",
+
     "Lifelong Learner"
+
 ];
 
 
 let wordIndex = 0;
+
 let characterIndex = 0;
+
 let deleting = false;
 
 
 function typeEffect() {
 
-<<<<<<< HEAD
-    if (!typingText) return;
-
-    const currentWord = words[wordIndex];
-=======
     const currentWord =
         words[wordIndex];
 
->>>>>>> save-my-website
 
     if (!deleting) {
 
@@ -218,6 +199,7 @@ function typeEffect() {
             );
 
             return;
+
         }
 
     } else {
@@ -235,149 +217,14 @@ function typeEffect() {
 
             deleting = false;
 
-<<<<<<< HEAD
-            wordIndex++;
-
-            if (wordIndex >= words.length) {
-                wordIndex = 0;
-            }
-=======
             wordIndex =
                 (wordIndex + 1)
                 % words.length;
 
->>>>>>> save-my-website
         }
+
     }
 
-<<<<<<< HEAD
-    setTimeout(
-        typeEffect,
-        deleting ? 45 : 90
-    );
-}
-
-
-if (typingText) {
-    typeEffect();
-}
-
-
-/* =================================
-   3. SCROLL PROGRESS BAR
-================================= */
-
-const progressBar =
-    document.getElementById("progress-bar");
-
-
-function updateProgressBar() {
-
-    if (!progressBar) return;
-
-    const scrollTop = window.scrollY;
-
-    const documentHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-    if (documentHeight <= 0) return;
-
-    const scrollPercentage =
-        (scrollTop / documentHeight) * 100;
-
-    progressBar.style.width =
-        `${scrollPercentage}%`;
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateProgressBar,
-    { passive: true }
-);
-
-updateProgressBar();
-
-
-/* =================================
-   4. MOBILE MENU
-================================= */
-
-const menuButton =
-    document.querySelector(".menu-btn");
-
-const navLinks =
-    document.querySelector(".nav-links");
-
-
-if (menuButton && navLinks) {
-
-    menuButton.addEventListener("click", (event) => {
-
-        event.stopPropagation();
-
-        navLinks.classList.toggle("active");
-
-    });
-
-
-    /* =================================
-       5. CLOSE MENU WHEN LINK IS CLICKED
-    ================================= */
-
-    document.querySelectorAll(".nav-links a")
-        .forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navLinks.classList.remove("active");
-
-            });
-
-        });
-
-
-    /* =================================
-       6. CLOSE MENU OUTSIDE
-    ================================= */
-
-    document.addEventListener("click", (event) => {
-
-        if (
-            navLinks.classList.contains("active") &&
-            !navLinks.contains(event.target) &&
-            !menuButton.contains(event.target)
-        ) {
-
-            navLinks.classList.remove("active");
-
-        }
-
-    });
-
-
-    /* =================================
-       7. CLOSE MENU WITH ESCAPE
-    ================================= */
-
-    document.addEventListener("keydown", (event) => {
-
-        if (event.key === "Escape") {
-
-            navLinks.classList.remove("active");
-
-        }
-
-    });
-
-}
-
-
-/* =================================
-   8. SCROLL REVEAL
-================================= */
-=======
 
     const speed =
         deleting ? 45 : 90;
@@ -397,7 +244,6 @@ typeEffect();
 /* =====================================================
    SCROLL REVEAL
 ===================================================== */
->>>>>>> save-my-website
 
 const revealElements =
     document.querySelectorAll(
@@ -418,15 +264,6 @@ const revealObserver =
                     );
 
                     observer.unobserve(
-                        entry.target
-                    );
-
-                    /*
-                       Stop observing after
-                       the animation happens.
-                    */
-
-                    revealObserver.unobserve(
                         entry.target
                     );
 
